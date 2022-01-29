@@ -42,6 +42,7 @@ function OTPInput() {
         }
         
     }
+    
     if(word === targetWord){
       alert("you win!!");
     }
