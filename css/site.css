@@ -1,0 +1,72 @@
+html{
+    height: 100%;
+}
+
+body{
+    background-color: black;
+    height: 100%;
+}
+
+.full-height{
+    height: 100%;
+}
+
+#game{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 300px;
+}
+
+.top-header{
+    height: 50px;
+    background-color: inherit;
+    border-bottom: 1px solid rgb(58, 59, 61);
+    color: white;
+}
+
+#wordle-grid{
+    margin: 10px;
+    height: 50%;
+}
+
+/*GRID CONSTRUCT*/
+
+.wrapper {
+    margin: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    /* grid-template-columns: 10% 10% 10% 10% 10%;
+    grid-gap: 0; */
+    color: #444;
+    align-content: space-around;
+    justify-content: center;
+    height: 15%;
+  }
+  
+  .box {
+    background-color: #444;
+    color: #fff;
+    margin: 1px;
+    font-size: 150%;
+    width: 10%;
+    height: 100%;
+    padding: 3%;
+  }
+
+  /* input.box {
+    background-color: green;
+  } */
+
+/*GRID CONSTRUCT*/
+
+
+/* 
+#base-left{
+    background-color: white;
+}
+#base-center{
+    background-color: white;
+}
+#base-right{
+    background-color: white;
+} */
