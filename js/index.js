@@ -29,24 +29,29 @@ function OTPInput() {
   }
   //OTPInput();
 
-  function control(rowOrder){
+  var game = {
+    control: function(rowOrder){
+      debugger;
       var word = "";
-    for(var i = 1; i <= letter_count; i++){
-        var letter = $('#' + rowOrder + '_' + i).val();
-        if(letter === targetWord[i-1]){
-          word += letter;
-            $('#' + rowOrder + '_' + i).css("background-color", "green");
-        }
-        else if(targetWord.includes(letter)){
-            $('#' + rowOrder + '_' + i).css("background-color", "RGB(181, 159, 59)");
-        }
-        
-    }
+      for(var i = 1; i <= letter_count; i++){
+          var letter = $('#' + rowOrder + '_' + i).val();
+          if(letter === targetWord[i-1]){
+            word += letter;
+              $('#' + rowOrder + '_' + i).css("background-color", "green");
+          }
+          else if(targetWord.includes(letter)){
+              $('#' + rowOrder + '_' + i).css("background-color", "RGB(181, 159, 59)");
+          }
+          
+      }
+      if(word === targetWord){
+        alert("you win!!");
+      }
+      console.log(word);
+    },
     
-    if(word === targetWord){
-      alert("you win!!");
+    next: function(row, column){
+        $('#' + row + '_' + (column + 1)).focus();
     }
-    console.log(word);
-
   }
 
