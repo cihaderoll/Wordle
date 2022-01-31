@@ -30,9 +30,9 @@ function OTPInput() {
   //OTPInput();
 
   var game = {
-    control: function(rowOrder){
-      debugger;
+    control: function(rowOrder, elem){
       var word = "";
+      $(elem).val(elem.value.toUpperCase());
       for(var i = 1; i <= letter_count; i++){
           var letter = $('#' + rowOrder + '_' + i).val();
           if(letter === targetWord[i-1]){
@@ -47,11 +47,14 @@ function OTPInput() {
       if(word === targetWord){
         alert("you win!!");
       }
-      console.log(word);
+      else{
+        $('#' + (rowOrder + 1) + '_1').focus();
+      }
     },
     
-    next: function(row, column){
-        $('#' + row + '_' + (column + 1)).focus();
+    next: function(row, column, elem){
+      $(elem).val(elem.value.toUpperCase());
+      $('#' + row + '_' + (column + 1)).focus();
     }
   }
 
